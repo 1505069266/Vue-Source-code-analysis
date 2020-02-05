@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <p>{{name}}</p>
+    <p>{{age}}</p>
+    <p k-text="name"></p>
+    <p k-html="html"></p>
+    <button @click="handleClick">点我</button>
+    <button @click="changeName">www</button>
+  </div>
+  <script src="./compile.js"></script>
+  <script src="./kvue.js"></script>
+  <script>
+    const kaikeba = new KVue({
+      el:"#app",
+      data: {
+        name: '名字',
+        age: 12,
+        html: "<button>这是一个按钮</button>"
+      },
+      created(){
+        console.log("开始渲染")
+      },
+      methods: {
+        changeName(){
+          this.name = "朱晓乐"
+          this.age = 23
+        },
+        handleClick(){
+          this.age = 118
+        }
+      }
+
+    })
+  </script>
+</body>
+</html>

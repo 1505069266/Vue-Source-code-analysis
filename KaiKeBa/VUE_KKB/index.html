@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script src="K-vue.js"></script>
+  <script>
+    const app = new KVue({
+      data:{
+        test: "I am test",
+        off:{
+          tt: 'ewe'
+        }
+      }
+    })
+    app.$data.test = "test"
+    app.$data.off.tt = "test tt"
+
+    let str = "{{顶顶顶}}"
+    let s = str.replace(/\{\{(.*)\}\}/gi, "朱晓乐")
+    console.log(s)
+  </script>
+</body>
+</html>
